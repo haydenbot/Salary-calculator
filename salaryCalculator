@@ -1,0 +1,85 @@
+//* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+//* Program name    : Lab1.1                                            * 
+//*                                                                     * 
+//* Written by      : Greylen Fernandez                                 * 
+//*                                                                     * 
+//* Purpose	: This program will calculate your salary                   * 
+//*                                                                     * 
+//* Inputs : User input                                                 * 
+//*                                                                     * 
+//* Outputs: Will output payRate, hoursWorked, and Salary               * 
+//*                                                                     * 
+//* Calls: No internal or external calls                                * 
+//*                                                                     * 
+//* Structure: BEGIN                                                    * 
+//*                 Straight line code no sub-processes                 * 
+//*            STOP                                                     * 
+//*                 End of Program                                      * 
+//*                                                                     * 
+//*---------------------------------------------------------------------* 
+//* Collaboration   : Got help from: Hayden Botine                      *
+//					Problem B copied solution code from                 *
+//https://www.includehelp.com/cpp-tutorial/what-is-the-difference-between-cout-and-std-cout.aspx*  
+//*---------------------------------------------------------------------* 
+//* Change Log:                                                         * 
+//* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+
+//Problem A
+#include <iostream>
+#include <string>
+
+int main()
+{
+	//Problem B
+	std::cout << "Hello World!" << std::endl;
+	std::cin;
+	//Problem C
+	int SECRET = 13;
+	double rate = 12.50;
+	//Problem D
+	int num1;
+	int num2;
+	int newNum;
+	double hoursWorked;
+	double wages;
+	//Problem E
+	using namespace std;
+	cout << "Greylen Fernandez\t" << "L1-1\t" << "L1-1.exe" << endl;
+	//Problem F
+	cout << "Enter integer value for num1: \n";
+	cin >> num1;
+	cout << "Enter integer value for num2: \n";
+	cin >> num2;
+	//Problem G
+	cout << "The value of num1 = " << num1;
+	cout << " The value of num2 = " << num2 << endl;
+	//Problem H
+	newNum = num1 * 2 + num2;
+	cout << "The value of newNum = " << newNum;
+	//Problem I
+	newNum = newNum + SECRET;
+	cout << "\n I've added a secret value to newNum and this is the new value = " << newNum;
+	//Problem J
+	string name;
+	cout << "\n Please enter your last name here: ";
+	cin >> name;
+	//Problem K
+	cout << "\n Please input a decimal number between zero and 100: \n";
+	cin >> hoursWorked;
+	//Problem L
+	wages = rate * hoursWorked;
+	//Problem M
+	cout << "Name: " << name << endl;
+	cout << "Pay Rate: $" << rate << endl;
+	cout << "Hours Worked: " << hoursWorked << endl;
+	cout << "\n";
+	cout << "Salary: $" << wages << endl;
+	//Problem N
+	//I didn't quite understand what you wanted me to do in this problem. 
+	//Problem O
+	char q;
+	cout << "\nPress any key to Exit.";
+	cin.ignore(2, '\n');
+	cin.get(q);
+	return 0;
+	
