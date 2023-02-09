@@ -1,0 +1,68 @@
+B
+
+//* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+//* Program name: The Tax Machine                                       *
+//*                                                                     *
+//* Written by: Greylen Fernandez                                       *
+//*                                                                     *
+//* Purpose: Calculate the final price of marked up items               *
+//*                                                                     *
+//* Inputs: User input                                                  *
+//*                                                                     *
+//* Outputs: The calculated prices                                      *
+//*                                                                     *
+//* Calls: Nothing                                                      *
+//*                                                                     *
+//* Structure: BEGIN                                                    *
+//*                        Straight line code no sub-processes          *
+//*                   STOP                                              *
+//*                        End of Program                               *
+//*---------------------------------------------------------------------*
+//* Collaboration: Hayden Botine                                        *
+//*---------------------------------------------------------------------*
+//* Change Log:                                                         *
+//*Date: 02/08/2023                                                     *
+//***********************************************************************
+#include <string>
+#include <iostream>
+int main() {
+
+	using namespace std;
+	cout << "Greylen Fernandez \t" << "L1-2\t" << "L1-2.exe" << endl;
+	double originalPrice = 0;
+	double markedupPercent = 0;
+	//salestaxRate is the %
+	double salestaxRate = 0;
+	double sellingPrice = 0;
+	//salesTax is sellingPrice X sales rate%
+	double salesTax = 0;
+	//finalPrice is salesTax + sellingPrice
+	double finalPrice = 0;
+
+	//User Input
+	cout << "Enter the original price of the item: ";
+	cin >> originalPrice;
+	cout << "Enter the marked up percentage: ";
+	cin >> markedupPercent;
+	cout << "Enter the sales tax rate: ";
+	cin >> salestaxRate;
+
+	//Calculations
+	sellingPrice = (markedupPercent / 100 + 1) * originalPrice;
+	salesTax = sellingPrice * salestaxRate / 100;
+	finalPrice = sellingPrice + salesTax;
+
+	//Calculation Output
+	cout << "The original price = $" << originalPrice << endl;
+	cout << "The price is marked up by " << markedupPercent << "%" << endl;
+	cout << "The selling price = $" << sellingPrice << endl;
+	cout << "The sales rate = " << salestaxRate << "%" << endl;
+	cout << "The sale tax = $" << salesTax << endl;
+	cout << "The final price = $" << finalPrice << endl;
+	
+	char q;
+	cout << "\nPress any key to Exit.";
+	cin.ignore(2, '\n');
+	cin.get(q);
+	return 0;
+}
