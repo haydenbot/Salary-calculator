@@ -1,0 +1,81 @@
+//* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+//* Program name: Salary Updater 10,000                                 *
+//*                                                                     *
+//* Written by: Greylen Fernadnez & Hayden Botine                       *
+//*                                                                     *
+//* Purpose: Displaying updated salary in console and updating          *
+//*          L1 - 3DATA.dat                                             *
+//* Inputs:  No Inputs from user                                        *
+//*                                                                     *
+//* Outputs: Outputs updated salary                                     *
+//*                                                                     *
+//* Calls: N\A                                                          *
+//*                                                                     *
+//* Structure: BEGIN                                                    *
+//*                        Straight line code no sub-processes          *
+//*                   STOP                                              *
+//*                        End of Program                               *
+//*---------------------------------------------------------------------*
+//* Collaboration: Hayden Botine & Julia Raygoza                        *
+//*---------------------------------------------------------------------*
+//* Change Log:                                                         *
+//  Date: 02/09/2023                                                    *
+//***********************************************************************
+#include <fstream>
+#include <iostream>
+#include <iomanip>
+#include <string>
+
+using namespace std;
+
+int main() {
+    cout << "Greylen Fernandez \t" << "L1-3" << endl;
+
+    //declaring variables
+    string firstName1, firstName2, firstName3, firstName4;
+    string lastName1, lastName2, lastName3, lastName4;
+    double currentSal1, currentSal2, currentSal3, currentSal4;
+    double raisePer1, raisePer2, raisePer3, raisePer4;
+    double newSal1, newSal2, newSal3, newSal4;
+
+    ifstream inData;
+    ofstream outData;
+
+    //opening the file
+    inData.open("C:\\Users\\greyl\\Desktop\\School\\Spring 2023\\CS022\\Lab1\\L1-3DATA.txt");
+    outData.open("C:\\Users\\greyl\\Desktop\\School\\Spring 2023\\CS022\\Lab1\\L1 - 3DATA.dat");
+
+
+    outData << fixed << showpoint;
+    outData << setprecision(2);
+
+    //assigning variables from inData
+    inData >> lastName1 >> firstName1 >> currentSal1 >> raisePer1 >>
+        lastName2 >> firstName2 >> currentSal2 >> raisePer2 >>
+        lastName3 >> firstName3 >> currentSal3 >> raisePer3 >>
+        lastName4 >> firstName4 >> currentSal4 >> raisePer4;
+
+    newSal1 = currentSal1 * (raisePer1 / 100) + currentSal1;
+    newSal2 = currentSal2 * (raisePer2 / 100) + currentSal2;
+    newSal3 = currentSal3 * (raisePer3 / 100) + currentSal3;
+    newSal4 = currentSal4 * (raisePer4 / 100) + currentSal4;
+
+    outData << firstName1 << " " << lastName1 << "\n\tCurrent total Salary: $" << currentSal1 << "\n\tUpdated total Salary: $" << newSal1 << "\n" << endl;
+    outData << firstName2 << " " << lastName2 << "\n\tCurrent total Salary: $" << currentSal2 << "\n\tUpdated total Salary: $" << newSal2 << "\n" << endl;
+    outData << firstName3 << " " << lastName3 << "\n\tCurrent total Salary: $" << currentSal3 << "\n\tUpdated total Salary: $" << newSal3 << "\n" << endl;
+    outData << firstName4 << " " << lastName4 << "\n\tCurrent total Salary: $" << currentSal4 << "\n\tUpdated total Salary: $" << newSal4 << "\n" << endl;
+
+    inData.close();
+    outData.close();
+
+    cout << firstName1 << " " << lastName1 << " " << "\nUpdated total Salary: $" << newSal1 << "\n" << endl;
+    cout << firstName2 << " " << lastName2 << " " << "\nUpdated total Salary: $" << newSal2 << "\n" << endl;
+    cout << firstName3 << " " << lastName3 << " " << "\nUpdated total Salary: $" << newSal3 << "\n" << endl;
+    cout << firstName4 << " " << lastName4 << " " << "\nUpdated total Salary: $" << newSal4 << "\n" << endl;
+
+    char q;
+    cout << "Press any key to Exit.";
+    cin.ignore(2, '\n');
+    cin.get(q);
+    return 0;
+}
