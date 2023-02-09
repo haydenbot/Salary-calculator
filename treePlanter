@@ -1,0 +1,65 @@
+//* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+//* Program name: Tree Planter                                          *
+//*                                                                     *
+//* Written by: Greylen Fernandez & Hayden Botine                       *
+//*                                                                     *
+//* Purpose: Fine number of trees that can be planted &                 *
+//*          total space occupied.                                      *
+//* Inputs:  User inputs length of yard & radius of tree & distance     *
+//*          between trees                                              *
+//* Outputs: Number of trees & Total area occupied by trees.            *
+//*                                                                     *
+//* Calls:  No Internal or external calls                               *
+//*                                                                     *
+//* Structure: BEGIN                                                    *
+//*                        Straight line code no sub-processes          *
+//*                   STOP                                              *
+//*                        End of Program                               *
+//*---------------------------------------------------------------------*
+//* Collaboration: Help from: Ferenc Deak involving PI                  *
+//                  https://stackoverflow.com/a/1727896                 *
+//					    Lynn Hadley - Math formula                      *
+//			https://www.youtube.com/watch?v=WlOuMufGolU                 *
+//					       Hayden Botine                                *
+//*---------------------------------------------------------------------*
+//* Change Log:                                                         *
+//  Date: 02/09/2023                                                    *
+//***********************************************************************
+#include <iostream>
+#include <iomanip>
+#include <cmath>
+using namespace std;
+int main() {
+	cout << "Greylen Fernandez \t" << "L1-4" << endl;
+	double yardLength;
+	double radiusgrownTree;
+	double distancegrownTree;
+	int plantdeTrees;
+	double radiusFeet;
+	double areaOfTrees;
+	double PI = 3.14159265;
+	
+	//user prompt
+	cout << "Enter the length of the yard in feet: ";
+	cin >> yardLength;
+	cout << "\nEnter the radius in inches of the fully grown tree: ";
+	cin >> radiusgrownTree;
+	cout << "\nEnter the distance in feet between fully grown trees: ";
+	cin >> distancegrownTree;
+
+	//Calculation Chamber
+	radiusFeet = radiusgrownTree / 12;
+	plantdeTrees = (yardLength / (2 * radiusFeet + distancegrownTree));
+
+	cout << "\nThe number of trees that can be planted: " << plantdeTrees << endl;
+	cout << fixed << showpoint << setprecision(2);
+	areaOfTrees = (PI * radiusFeet * radiusFeet) * plantdeTrees;
+	cout << "\nTotal area occupied by the trees: " << areaOfTrees << endl;
+	
+
+	char q;
+	cout << "Press any key to Exit.";
+	cin.ignore(2, '\n');
+	cin.get(q);
+	return 0;
+}
