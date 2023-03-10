@@ -45,7 +45,7 @@ int main()
 		{
 		case 1:
 			//user only inputs numbers for one vegetable
-			cout << "\nEnter first vegetable seed cost per acre: $";
+			cout << "\nEnter seed cost per acre: $";
 			cin >> firstVegCost;
 			
 			while (!cin > 0)
@@ -55,7 +55,7 @@ int main()
 				exit(0);
 			}
 			
-			cout << "\nEnter first vegetable plantation cost per acre: $";
+			cout << "\nEnter plantation cost per acre: $";
 			cin >> firstVegPlantation;
 
 			while (!cin > 0)
@@ -65,7 +65,7 @@ int main()
 				exit(0);
 			}
 
-			cout << "\nEnter first vegetable fertilizing cost per acre: $";
+			cout << "\nEnter fertilizing cost per acre: $";
 			cin >> firstFertilizing;
 
 			while (!cin > 0)
@@ -75,7 +75,7 @@ int main()
 				exit(0);
 			}
 
-			cout << "\nEnter first vegetable labor cost per acre: $";
+			cout << "\nEnter labor cost per acre: $";
 			cin >> firstLabour;
 
 			while (!cin > 0)
