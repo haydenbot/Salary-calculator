@@ -1,0 +1,248 @@
+#include <iostream>
+#include <iomanip>
+
+using namespace std;
+
+#include <iostream>
+#include<iomanip>
+
+using namespace std;
+
+int main()
+{
+	cout << "Hayden" << "\t" << "farmCalculator.cpp\n";
+
+	//declaring variables
+	double acres;
+	int plant;
+	double landPer;
+	double firstVegCost;
+	double firstVegPlantation;
+	double firstFertilizing;
+	double firstLabour;
+	double firstSell;
+	double secVegCost;
+	double secVegPlantation;
+	double secFertilizing;
+	double secLabour;
+	double secSell;
+	double totalRev;
+	double profitLoss;
+	double firstLand;
+	double secondLand;
+
+	//user input
+	cout << "\nEnter farm area in acres: ";
+	cin >> acres;
+
+	switch (acres > 0)
+	{
+	case true:
+		cout << "\nEnter the number of vegetables to be planted (1/2): ";
+		cin >> plant;
+
+		switch (plant)
+		{
+		case 1:
+			//user only inputs numbers for one vegetable
+			cout << "\nEnter first vegetable seed cost per acre: $";
+			cin >> firstVegCost;
+			
+			while (!cin > 0)
+			{
+				cin.clear();
+				cout << "\nEntered invalid character. Ending program." << endl;
+				exit(0);
+			}
+			
+			cout << "\nEnter first vegetable plantation cost per acre: $";
+			cin >> firstVegPlantation;
+
+			while (!cin > 0)
+			{
+				cin.clear();
+				cout << "\nEntered invalid character. Ending program." << endl;
+				exit(0);
+			}
+
+			cout << "\nEnter first vegetable fertilizing cost per acre: $";
+			cin >> firstFertilizing;
+
+			while (!cin > 0)
+			{
+				cin.clear();
+				cout << "\nEntered invalid character. Ending program." << endl;
+				exit(0);
+			}
+
+			cout << "\nEnter first vegetable labor cost per acre: $";
+			cin >> firstLabour;
+
+			while (!cin > 0)
+			{
+				cin.clear();
+				cout << "\nEntered invalid character. Ending program." << endl;
+				exit(0);
+			}
+
+			cout << "\nEnter first vegetable selling cost per acre: $";
+			cin >> firstSell;
+
+			while (!cin > 0)
+			{
+				cin.clear();
+				cout << "\nEntered invalid character. Ending program." << endl;
+				exit(0);
+			}
+
+			//calculation time
+
+			totalRev = firstSell * acres;
+			profitLoss = totalRev - ((firstVegCost * acres) + (firstVegPlantation * acres) + (firstFertilizing * acres) + (firstLabour * acres));
+
+			//user output
+			cout << fixed << showpoint << setprecision(2);
+			cout << "\nThe total revenue is: $" << totalRev;
+			cout << "Profit/loss from farming: $" << profitLoss;
+
+			break;
+
+		case 2:
+			cout << "\nEnter the portion (as a percentage) of land used for the first vegetable: ";
+			cin >> landPer;
+
+			while (!cin > 0)
+			{
+				cin.clear();
+				cout << "\nEntered invalid character. Ending program." << endl;
+				exit(0);
+			}
+
+			//user input for first vegetable
+			cout << "\nEnter first vegetable seed cost per acre: $";
+			cin >> firstVegCost;
+
+			while (!cin > 0)
+			{
+				cin.clear();
+				cout << "\nEntered invalid character. Ending program." << endl;
+				exit(0);
+			}
+
+			cout << "\nEnter first vegetable plantation cost per acre: $";
+			cin >> firstVegPlantation;
+
+			while (!cin > 0)
+			{
+				cin.clear();
+				cout << "\nEntered invalid character. Ending program." << endl;
+				exit(0);
+			}
+
+			cout << "\nEnter first vegetable fertilizing cost per acre: $";
+			cin >> firstFertilizing;
+
+			while (!cin > 0)
+			{
+				cin.clear();
+				cout << "\nEntered invalid character. Ending program." << endl;
+				exit(0);
+			}
+
+			cout << "\nEnter first vegetable labor cost per acre: $";
+			cin >> firstLabour;
+
+			while (!cin > 0)
+			{
+				cin.clear();
+				cout << "\nEntered invalid character. Ending program." << endl;
+				exit(0);
+			}
+
+			cout << "\nEnter first vegetable selling cost per acre: $";
+			cin >> firstSell;
+
+			while (!cin > 0)
+			{
+				cin.clear();
+				cout << "\nEntered invalid character. Ending program." << endl;
+				exit(0);
+			}
+
+			//user input for second vegetable
+			cout << "\nEnter second vegetable seed cost per acre: $";
+			cin >> secVegCost;
+
+			while (!cin > 0)
+			{
+				cin.clear();
+				cout << "\nEntered invalid character. Ending program." << endl;
+				exit(0);
+			}
+
+			cout << "\nEnter second vegetable plantation cost per acre: $";
+			cin >> secVegPlantation;
+
+			while (!cin > 0)
+			{
+				cin.clear();
+				cout << "\nEntered invalid character. Ending program." << endl;
+				exit(0);
+			}
+
+			cout << "\nEnter second vegetable fertilizing cost per acre: $";
+			cin >> secFertilizing;
+
+			while (!cin > 0)
+			{
+				cin.clear();
+				cout << "\nEntered invalid character. Ending program." << endl;
+				exit(0);
+			}
+
+			cout << "\nEnter second vegetable labor cost per acre: $";
+			cin >> secLabour;
+
+			while (!cin > 0)
+			{
+				cin.clear();
+				cout << "\nEntered invalid character. Ending program." << endl;
+				exit(0);
+			}
+
+			cout << "\nEnter second vegetable selling cost per acre: $";
+			cin >> secSell;
+
+			while (!cin > 0)
+			{
+				cin.clear();
+				cout << "\nEntered invalid character. Ending program." << endl;
+				exit(0);
+			}
+
+			//calculation time
+			firstLand = landPer / 100;
+			secondLand = (100 - landPer) / 100;
+
+			totalRev = ((firstSell * acres * firstLand) + (secSell * acres * secondLand));
+			profitLoss = totalRev - ((firstVegCost * acres * firstLand) + (firstVegPlantation * acres * firstLand) +
+				(firstFertilizing * acres * firstLand) + (firstLabour * acres * firstLand) + (secVegCost * acres * secondLand) +
+				(secVegPlantation * acres * secondLand) + (secFertilizing * acres * secondLand) + (secLabour * acres * secondLand));
+
+			//user output
+			cout << fixed << showpoint << setprecision(2);
+			cout << "\nThe total revenue is: $" << totalRev;
+			cout << "Profit/loss from farming: $" << profitLoss;
+
+			break;
+
+		default:
+			cout << "\nEntered invalid character. Ending program." << endl;
+		}
+		break;
+	case false:
+		cout << "\nEntered invalid character. Ending program." << endl;
+	}
+
+	return 0;
+}
