@@ -103,7 +103,7 @@ int main()
 			//user output
 			cout << fixed << showpoint << setprecision(2);
 			cout << "\nThe total revenue is: $" << totalRev;
-			cout << "Profit/loss from farming: $" << profitLoss;
+			cout << "\nProfit/loss from farming: $" << profitLoss;
 
 			break;
 
@@ -232,7 +232,7 @@ int main()
 			//user output
 			cout << fixed << showpoint << setprecision(2);
 			cout << "\nThe total revenue is: $" << totalRev;
-			cout << "Profit/loss from farming: $" << profitLoss;
+			cout << "\nProfit/loss from farming: $" << profitLoss;
 
 			break;
 
