@@ -1,0 +1,58 @@
+#include <iostream>
+#include <cstdlib>
+#include <ctime>
+
+using namespace std;
+
+int main()
+{
+	cout << "Hayden" << "\t" << "guessGame.cpp\n";
+
+	int num;
+	
+	int guess;
+
+	int diff;
+
+	int i = 1;
+
+	srand(time(0));
+	num = rand() % 100;
+
+	while (i < 5)
+	{
+		cout << "Enter an integer greater than or equal to 0 and less than 100: ";
+
+		cin >> guess;
+		cout << endl;
+
+		diff = abs(num - guess);
+
+		if (diff == 0)
+		{
+			cout << "You guessed the correct number." << endl;
+			i = i + 4;
+		}
+		else if (diff >= 50 && guess < num)
+			cout << "Your guess is very low.\n Guess again!" << endl;
+		else if (diff >= 50 && guess > num)
+			cout << "Your guess is very high.\n Guess again!" << endl;
+		else if (diff >= 30 && guess < num)
+			cout << "Your guess is low.\n Guess again!" << endl;
+		else if (diff >= 30 && guess > num)
+			cout << "Your guess is high.\n Guess again!" << endl;
+		else if (diff >= 15 && guess < num)
+			cout << "Your guess is moderately low.\n Guess again!" << endl;
+		else if (diff >= 15 && guess > num)
+			cout << "Your guess is moderately high.\n Guess again!" << endl;
+		else if (diff < 15 && guess < num)
+			cout << "Your guess is somewhat low.\n Guess again!" << endl;
+		else
+			cout << "Your guess is somewhat high.\n Guess again!" << endl;
+
+	}
+
+	cout << "Game Over!";
+
+	return 0;
+}
