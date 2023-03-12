@@ -9,12 +9,12 @@ int main()
 	cout << "Hayden" << "\t" << "guessGame.cpp\n";
 
 	int num;
-	
+
 	int guess;
 
 	int diff;
 
-	int i = 1;
+	int i = 0;
 
 	srand(time(0));
 	num = rand() % 100;
@@ -30,29 +30,51 @@ int main()
 
 		if (diff == 0)
 		{
-			cout << "You guessed the correct number." << endl;
+			cout << "Winner! You guessed the correct number." << endl;
 			i = i + 4;
 		}
 		else if (diff >= 50 && guess < num)
+		{
 			cout << "Your guess is very low.\n Guess again!" << endl;
+			i = i++;
+		}
 		else if (diff >= 50 && guess > num)
+		{
 			cout << "Your guess is very high.\n Guess again!" << endl;
+			i = i++;
+		}
 		else if (diff >= 30 && guess < num)
+		{
 			cout << "Your guess is low.\n Guess again!" << endl;
+			i = i++;
+		}
 		else if (diff >= 30 && guess > num)
+		{
 			cout << "Your guess is high.\n Guess again!" << endl;
+			i = i++;
+		}
 		else if (diff >= 15 && guess < num)
+		{
 			cout << "Your guess is moderately low.\n Guess again!" << endl;
+			i = i++;
+		}
 		else if (diff >= 15 && guess > num)
+		{
 			cout << "Your guess is moderately high.\n Guess again!" << endl;
+			i = i++;
+		}
 		else if (diff < 15 && guess < num)
+		{
 			cout << "Your guess is somewhat low.\n Guess again!" << endl;
+			i = i++;
+		}
 		else
+		{
 			cout << "Your guess is somewhat high.\n Guess again!" << endl;
+			i = i++;
+		}
 
 	}
-
-	cout << "Game Over!";
 
 	return 0;
 }
