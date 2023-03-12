@@ -6,8 +6,9 @@ using namespace std;
 
 int main()
 {
-	cout << "Hayden" << "\t" << "guessGame.cpp\n";
+	cout << "Hayden" << "\t" << "guessGame.cpp\n" << endl;
 
+	//declaring variables
 	int num;
 
 	int guess;
@@ -16,6 +17,7 @@ int main()
 
 	int i = 0;
 
+	//rand number generator
 	srand(time(0));
 	num = rand() % 100;
 
@@ -23,11 +25,19 @@ int main()
 	{
 		cout << "Enter an integer greater than or equal to 0 and less than 100: ";
 
+		//user input guessing time
 		cin >> guess;
 		cout << endl;
 
+		if (guess < 0 || guess > 100)
+		{
+			cout << "Invalid input. Ending program." << endl;
+			exit(0);
+		}
+
 		diff = abs(num - guess);
 
+		//user output when guessing number
 		if (diff == 0)
 		{
 			cout << "Winner! You guessed the correct number." << endl;
