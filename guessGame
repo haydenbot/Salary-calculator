@@ -1,3 +1,45 @@
+//* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+//* Program name    : guessGame                                         * 
+//*                                                                     * 
+//* Written by      : Hayden Botine                                     * 
+//*                                                                     * 
+//* Purpose         : This is for entertainment as the user tries to    * 
+//*                   guess the number between 0-99 with only five      * 
+//*                     tries					        * 
+//*                         		                                * 
+//*                                                                     * 
+//* Inputs          : User enters a number in the terminal	        * 
+//*                                                                     * 
+//* Outputs         : Displays how far off the user is from the  	*
+//*			correct number					* 
+//*                                                                     * 
+//* Calls           : No internal or external calls                     * 
+//*                                                                     * 
+//* Structure       : BEGIN                                             * 
+//*                        Straight line code no sub-processes          * 
+//*                   STOP                                              * 
+//*                        End of Program                               * 
+//*                                                                     * 
+//*---------------------------------------------------------------------* 
+//* Collaboration   : Greylen Fernandez			                * 
+//*                  						        * 
+//*                         		                                * 
+//*                          		                                * 
+//*                          		                                * 
+//*                                                                     * 
+//*                   					                * 
+//*                          					        * 
+//*                  					                * 
+//*                          			                        * 
+//*                                                                     * 
+//*---------------------------------------------------------------------* 
+//* Change Log:                                                         * 
+//*                         Revision                                    * 
+//*       Date    Changed  Rel Ver Mod Purpose                          * 
+//* 03/10/23      						        * 
+//*                                                                     * 
+//* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+
 #include <iostream>
 #include <cstdlib>
 #include <ctime>
