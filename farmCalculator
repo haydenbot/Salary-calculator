@@ -1,3 +1,36 @@
+//* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+//* Program name    :  Farm Calculator                                  * 
+//*                                                                     * 
+//* Written by      : Hayden Botine                                     * 
+//*                                                                     * 
+//* Purpose         : To calculate the loss and profits of selling	*
+//*			vegetables					* 
+//*                                                                     * 
+//* Inputs          : User enters the cost of multiple things regarding *
+//*			the vegetables					* 
+//*                                                                     * 
+//* Outputs         :  Displays total revenue and loss/profts	        * 
+//*                                                                     * 
+//* Calls           : No internal or external calls                     * 
+//*                                                                     * 
+//* Structure       : BEGIN                                             * 
+//*                        Straight line code no sub-processes          * 
+//*                   STOP                                              * 
+//*                        End of Program                               * 
+//*                                                                     * 
+//*---------------------------------------------------------------------* 
+//* Collaboration   : Greylen Fernandez                                 * 
+//*                                                                     * 
+//*                				                        * 
+//*                                                                     * 
+//*---------------------------------------------------------------------* 
+//* Change Log:                                                         * 
+//*                         Revision                                    * 
+//*       Date    Changed  Rel Ver Mod Purpose                          * 
+//* 03/11/23     						        * 
+//*                                                                     * 
+//* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+
 #include <iostream>
 #include <iomanip>
 
