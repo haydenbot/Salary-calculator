@@ -1,5 +1,6 @@
 #include <iostream>
 #include <iomanip>
+#include <fstream>
 
 using namespace std;
 
@@ -13,11 +14,19 @@ void printResults(int zeroCount, int oddCount, int evenCount);
 
 int main()
 {
+	cout << "Hayden Botine \t" << "hiddenNumberFile.cpp\n" << endl;
+
 	int counter;
 	int number;
 	int zeros;
 	int odds;
 	int evens;
+
+	ifstream inData;
+	ofstream outData;
+
+	inData.open("C:\Users\hboti\OneDrive\Documents\L2-6\L2.6.txt");
+	outData.open("C:\Users\hboti\OneDrive\Documents\L2-6\L2-6Out.txt");
 
 	initialize(zeros, odds, evens);
 
@@ -30,6 +39,9 @@ int main()
 		cout << number << " ";
 		classifyNumber(number, zeros, odds, evens);
 	}
+
+	inData.close();
+	outData.close();
 
 	cout << endl;
 
